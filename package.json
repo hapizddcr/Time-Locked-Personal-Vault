@@ -1,0 +1,21 @@
+{
+  "name": "time-locked-personal-vault",
+  "version": "1.0.0",
+  "description": "Time Locked Personal Vault Smart Contract",
+  "type": "module",
+  "scripts": {
+    "build": "hardhat compile",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.21",
+    "@types/node": "^24.0.0",
+    "dotenv": "^16.6.1",
+    "hardhat": "^3.9.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
