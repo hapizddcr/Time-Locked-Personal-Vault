@@ -36,6 +36,7 @@ contract PersonalVault {
     error InvalidUnlockTime();
     error NoFunds();
     error TransferFailed();
+    error ZeroDeposit();
 
     // ==========================================================
     // Modifier
@@ -83,7 +84,9 @@ contract PersonalVault {
      */
     function deposit() external payable onlyOwner {
 
-        require(msg.value > 0, "Must send ETH");
+        if (msg.value == 0) {
+            revert ZeroDeposit();
+        }
 
         emit Deposit(msg.sender, msg.value);
     }
